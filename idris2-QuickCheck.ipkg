@@ -1,0 +1,9 @@
+package idris2-QuickCheck
+version = 0.1.0
+authors = "Thomas E. Hansen (port), Justin (internalized)"
+
+depends = base, contrib
+
+sourcedir = "src"
+
+modules = LCG, QuickCheck

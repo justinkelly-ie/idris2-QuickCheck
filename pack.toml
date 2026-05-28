@@ -1,0 +1,14 @@
+[package]
+name = "idris2-QuickCheck"
+version = "0.1.0"
+description = "Internalized Type-level QuickCheck library for RCIT"
+
+[dependencies]
+base = "*"
+contrib = "*"
+
+[custom.all.idris2-QuickCheck]
+type = "local"
+path = "."
+ipkg = "idris2-QuickCheck.ipkg"
+test = "idris2-QuickCheck-tests/idris2-QuickCheck-test.ipkg"

@@ -1,0 +1,6 @@
+[ fatal ] Error when executing system command.
+          Command: "/var/home/justin/.local/state/pack/install/214eb45472e15187e6f932c6820a0f0d5542a18e/idris2/bin/idris2" "--build" "idris2-LUniverse.ipkg"
+          Error code: 1
+[ fatal ] Error when executing system command.
+          Command: "/var/home/justin/.local/state/pack/install/214eb45472e15187e6f932c6820a0f0d5542a18e/idris2/bin/idris2" "--build" "idris2-LUniverse.ipkg"
+          Error code: 1

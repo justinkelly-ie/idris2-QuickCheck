@@ -1,0 +1,6 @@
+package double-slit-interference
+
+depends = base, contrib, idris2-QuickCheck, idris2-Multiset, idris2-LUniverse
+
+main = Main
+executable = double-slit-interference

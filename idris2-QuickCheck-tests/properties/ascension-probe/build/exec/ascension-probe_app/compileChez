@@ -1,0 +1,1 @@
+(parameterize ([optimize-level 3] [compile-file-message #f]) (compile-program "/var/home/justin/Projects/Linear-Physics/idris2-QuickCheck/idris2-QuickCheck-tests/properties/ascension-probe/build/exec/ascension-probe_app/ascension-probe.ss"))

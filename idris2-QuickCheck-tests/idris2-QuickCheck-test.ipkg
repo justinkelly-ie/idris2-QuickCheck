@@ -1,0 +1,10 @@
+package idris2-QuickCheck-test
+version = 0.1.0
+authors = "Justin"
+
+depends = base, contrib, idris2-QuickCheck, golden-runner-helper
+
+main = Tests
+executable = quickcheck-tests
+
+modules = Tests

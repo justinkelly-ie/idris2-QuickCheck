@@ -1,0 +1,5 @@
+prop_addCommutative: OK, passed 100 tests .
+
+prop_listDoubleReverse: OK, passed 100 tests .
+
+prop_listAppendCommutative: OK (Correctly detected failure)

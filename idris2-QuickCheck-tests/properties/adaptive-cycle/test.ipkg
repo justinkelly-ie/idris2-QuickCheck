@@ -1,0 +1,6 @@
+package adaptive-cycle
+
+depends = base, contrib, idris2-QuickCheck, idris2-Multiset, idris2-LUniverse, idris2-chromogeometry
+
+main = Main
+executable = adaptive-cycle
