@@ -1,0 +1,8 @@
+# Tell GitHub Linguist to detect Idris 2 properly
+*.idr linguist-language=Idris
+*.ipkg linguist-language=Idris
+
+# Don't count generated test output
+**/output linguist-generated
+**/expected linguist-generated
+**/compileChez linguist-generated
