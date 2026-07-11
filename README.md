@@ -5,7 +5,7 @@
 [![Idris2](https://img.shields.io/badge/Idris2-Pure_Nat-blue.svg)](https://github.com/idris-lang/Idris2)
 [![Dependencies](https://img.shields.io/badge/Dependencies-base%2C_contrib-green.svg)]()
 
-A port and internalization of the classic QuickCheck property-testing approach for Idris 2. Used as the shared test primitive across the [Nat-Science](https://github.com/justinkelly-ie/Nat-Science) project constellation.
+A port and internalization of the classic QuickCheck property-testing approach for Idris 2. Used as the shared test primitive across the [Finite-Science](https://github.com/justinkelly-ie/Finite-Science) project constellation.
 
 ---
 
@@ -87,7 +87,7 @@ depends = base, contrib, idris2-QuickCheck
 
 | Project | Role |
 |---|---|
-| [`Nat-Science`](https://github.com/justinkelly-ie/Nat-Science) | 55 property tests across physics, chemistry & biology |
+| [`Finite-Science`](https://github.com/justinkelly-ie/Finite-Science) | 55 property tests across physics, chemistry & biology |
 | [`idris2-Universe`](https://github.com/justinkelly-ie/idris2-Universe) | Core simulation engine tests |
 | [`idris2-Multiset`](https://github.com/justinkelly-ie/idris2-Multiset) | Multiset algebra law verification |
 | [`idris2-Chromogeometry`](https://github.com/justinkelly-ie/idris2-Chromogeometry) | Chromogeometric spread/quadrance theorems |
@@ -96,7 +96,9 @@ depends = base, contrib, idris2-QuickCheck
 
 ## Origin
 
-Ported from the original [QuickCheck for Haskell](https://web.archive.org/web/20010731175214/http://www.cs.chalmers.se/~rjmh/QuickCheck/QuickCheck.hs) by Koen Claessen & John Hughes. Idris 2 port by Thomas E. Hansen, internalized and extended for the Nat-Science project by Justin Kelly.
+Ported from the original [QuickCheck for Haskell](https://web.archive.org/web/20010731175214/http://www.cs.chalmers.se/~rjmh/QuickCheck/QuickCheck.hs) by Koen Claessen & John Hughes. 
+
+Idris 2 port and type-level extension patterns based on the work by Thomas Ekström Hansen and Edwin Brady in *"Type-level Property Based Testing"* ([arXiv:2407.12726](https://arxiv.org/html/2407.12726v1)). Internalized and extended for the Finite-Science project by Justin Kelly.
 
 ---
 
