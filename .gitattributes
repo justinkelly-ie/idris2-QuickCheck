@@ -1,8 +1,10 @@
-# Tell GitHub Linguist to detect Idris 2 properly
+# Tell GitHub Linguist that .idr files are Idris
 *.idr linguist-language=Idris
-*.ipkg linguist-language=Idris
 
-# Don't count generated test output
-**/output linguist-generated
-**/expected linguist-generated
-**/compileChez linguist-generated
+# Exclude build artifacts from language statistics
+build/** linguist-vendored
+build_*/** linguist-vendored
+*.ss linguist-vendored
+*.ttc linguist-vendored
+*.ttm linguist-vendored
+*.ibc linguist-vendored
