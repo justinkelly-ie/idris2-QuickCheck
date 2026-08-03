@@ -1,6 +1,6 @@
 package ascension-probe
 
-depends = base, contrib, idris2-Multiset, idris2-LUniverse
+depends = base, contrib, idris2-Multiset, idris2-Universe
 
 main = Main
 executable = ascension-probe
