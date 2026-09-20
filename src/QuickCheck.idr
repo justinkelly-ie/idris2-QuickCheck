@@ -222,7 +222,7 @@ Arbitrary Char where
 public export
 Arbitrary Nat where
   arbitrary = (cast . abs) <$> the (Gen Int) arbitrary
-  coarbitrary n = ?coarb_nat_rhs
+  coarbitrary n = variant (cast n)
 
 public export
 Arbitrary a => Arbitrary b => Arbitrary (a, b) where
@@ -255,7 +255,7 @@ Arbitrary Double where
        c <- arbitrary
        pure $ fraction a b c
 
-  coarbitrary n = ?coarb_double_rhs -- we are missing a `decodeFloat` equivalent
+  coarbitrary n = variant (cast (the Int (cast n)))
 
 
 ||| Generate a list of n random values.
@@ -303,7 +303,7 @@ Arbitrary ty => Arbitrary (n : Nat ** (Vect n ty)) where
        v <- genArbVect l {a=ty}
        pure (MkDPair l v)
 
-  coarbitrary n = ?coarb_vect_rhs
+  coarbitrary (MkDPair n v) = variant (cast n) . coarbitrary (toList v)
 
 public export
 Arbitrary String where
@@ -311,7 +311,7 @@ Arbitrary String where
     do chars <- the (Gen (List Char)) arbitrary
        pure (pack chars)
 
-  coarbitrary n = ?coarb_string_rhs
+  coarbitrary s = coarbitrary (unpack s)
 
 
 ------------------------------------------------------------------------
