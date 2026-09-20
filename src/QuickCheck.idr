@@ -592,6 +592,21 @@ public export
 verboseCheck : Testable a => a -> QCRes
 verboseCheck = check verbose
 
+||| QuickCheck helper for 1-argument property functions.
+public export
+qc : (Arbitrary a, Show a, Testable prop) => (a -> prop) -> QCRes
+qc f = quickCheck (MkFn f)
+
+||| QuickCheck helper for 2-argument property functions.
+public export
+qc2 : (Arbitrary a, Show a, Arbitrary b, Show b, Testable prop) => (a -> b -> prop) -> QCRes
+qc2 f = quickCheck (MkFn (\x => MkFn (f x)))
+
+||| QuickCheck helper for 3-argument property functions.
+public export
+qc3 : (Arbitrary a, Show a, Arbitrary b, Show b, Arbitrary c, Show c, Testable prop) => (a -> b -> c -> prop) -> QCRes
+qc3 f = quickCheck (MkFn (\x => MkFn (\y => MkFn (f x y))))
+
 
 ------------------------------------------------------------------------
 -- Testing at the type level
